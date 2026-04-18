@@ -7,7 +7,7 @@ A big part of our seminar will be based on R and some text manipulation. The bes
 3. Paste the repo address: `https://github.com/guilhermegarcia/granada_garcia.git`
 4. Now, click on `start_here.R` and run all the lines to install the necessary packages
 
-You're now ready!
+You're now ready to follow all the steps in the seminar.
 
 You will find the slides for the seminar here too (`seminar_garcia.pdf`).
 
