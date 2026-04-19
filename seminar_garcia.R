@@ -67,3 +67,34 @@ phon |>
   getSyl(pos = 1) |>
   syllable(const = "onset") |>
   str_length()
+
+# NOTE: What if we have a sentence...?
+
+sentence <- "This is a simple sentence in English!!"
+
+# We can use the cleanText() function to clean and tokenize text
+sentence |>
+  cleanText() |>
+  ipa(lg = "en")
+
+# Now, we can do anything with our data: for example,
+# let's extract syllable shapes from our sentence
+tokens <- sentence |>
+  cleanText() |>
+  ipa(lg = "en") |>
+  cv()
+
+tokens |>
+  str_split(pattern = "\\.") |>
+  unlist() |>
+  as_tibble() |>
+  count(value, sort = T)
+
+# NOTE: We can also create a simple figure:
+tokens |>
+  str_split(pattern = "\\.") |>
+  unlist() |>
+  as_tibble() |>
+  count(value, sort = T) |>
+  ggplot(aes(x = value, y = n)) +
+  geom_col()

@@ -172,8 +172,9 @@ weights <- tibble(
 ggplot(data = weights, aes(x = reorder(constraint, weight), y = weight, color = lang)) +
   geom_line(aes(group = lang, color = lang), linetype = "dashed") +
   geom_point(size = 4) +
+  geom_label(data = weights |> filter(constraint == "no_complex_onset"), aes(label = lang)) +
   theme_classic(base_family = "Futura") +
-  theme(legend.position = "top") +
+  theme(legend.position = "none") +
   labs(
     x = "Constraint", y = "Weight", color = "Language:",
     title = "Phonotactics from a novel",
