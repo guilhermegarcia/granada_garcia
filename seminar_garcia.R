@@ -36,7 +36,7 @@ cities |>
 # NOTE: Now let's get into Fonology
 # Starting with IPA transcription
 cities |>
-  ipa(lg = "it")
+  ipa(lg = "en")
 
 # NOTE: Save transcriptions in a variable
 phon <- cities |>
